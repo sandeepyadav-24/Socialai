@@ -1,7 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 const LeftNavbar = () => {
   return (
-    <div className=" md:w-1/5 px-5 bg-[#F9F9F9] h-screen">
+    <div className=" md:w-1/5 px-5 bg-[#F9F9F9] h-screen border-2">
       <div className="Profile py-5">
         <div className="flex flex-row px-1 py-3">
           <Image
@@ -21,12 +22,16 @@ const LeftNavbar = () => {
         <div className="text-[#434769] font-semibold">AI GEN</div>
         <div className="List text-[#3C455A] ">
           <div className="hover:bg-[#CDCDCD] rounded-md  px-3 py-1">
-            Ai Generation
+            <Link href="/page">DashBoard</Link>
           </div>
-          <div className="hover:bg-[#CDCDCD] rounded-md  px-3 py-1">AI Gen</div>
-          <div className="hover:bg-[#CDCDCD] rounded-md  px-3 py-1">Issues</div>
           <div className="hover:bg-[#CDCDCD] rounded-md  px-3 py-1">
-            Reports
+            <Link href="/newnotes">New Notes</Link>
+          </div>
+          <div className="hover:bg-[#CDCDCD] rounded-md  px-3 py-1">
+            <Link href="/notes">All Notes</Link>
+          </div>
+          <div className="hover:bg-[#CDCDCD] rounded-md  px-3 py-1">
+            <Link href="/prompt">Prompt Box</Link>
           </div>
         </div>
       </div>
