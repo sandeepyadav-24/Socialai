@@ -3,7 +3,7 @@ import NoteWriting from "@/component/NoteWriting";
 
 const NewNotes = () => {
   return (
-    <div className="flex flex-row bg-[#F5F8FA]">
+    <div className="flex flex-row bg-black">
       <LeftNavbar />
       <NoteWriting />
     </div>

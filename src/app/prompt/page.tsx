@@ -3,7 +3,7 @@ import PromptBox from "@/component/PromptBox";
 
 const WriteWithAi = () => {
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-row bg-black">
       <LeftNavbar />
       <PromptBox />
     </div>
