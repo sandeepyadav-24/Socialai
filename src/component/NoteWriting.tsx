@@ -1,5 +1,3 @@
-import { Editor } from "novel";
-
 const NoteWriting = () => {
   return (
     <div className="w-4/5 m-3 bg-[#F5F9FC] rounded-xl">
@@ -9,7 +7,6 @@ const NoteWriting = () => {
         <h1 className="text-6xl font-bold">
           Just put all Your head space Here
         </h1>
-        <Editor />
       </div>
     </div>
   );
