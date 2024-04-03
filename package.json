@@ -15,7 +15,9 @@
     "next": "14.1.4",
     "novel": "^0.3.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-quill": "^2.0.0",
+    "tiptap": "^1.32.2"
   },
   "devDependencies": {
     "@types/node": "^20",

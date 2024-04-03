@@ -2,7 +2,6 @@ import Image from "next/image";
 interface prop {
   title: string;
   description: string;
-  benefit: string;
   key: number;
   imageLink: string;
 }
@@ -12,7 +11,6 @@ const FeatureBox = (props: prop) => {
       <div className="md:w-3/5 px-5 py-3">
         <h1 className="font-bold text-3xl">{props.title}</h1>
         <h1>{props.description}</h1>
-        <h1>{props.benefit}</h1>
       </div>
       <div className="md:w-2/5 px-24">
         <Image

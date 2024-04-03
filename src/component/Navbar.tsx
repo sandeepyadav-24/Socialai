@@ -3,9 +3,9 @@ const Navbar = () => {
   return (
     <div className="flex flex-col md:flex-row justify-between  mx-10 my-5 ">
       <div className=" flex  flex-col md:flex-row justify-between">
-        <div className="font-bold text-4xl mx-7">Juri.Ai</div>
+        <div className="font-bold text-4xl mx-7">Avatar.AI</div>
         <div className="flex flex-col md:flex-row">
-          <div className="mx-3 my-2">Advocates</div>
+          <div className="mx-3 my-2"></div>
           <div className="mx-3 my-2">Pricing </div>
           <div className="mx-3 my-2">ChatBot</div>
         </div>
