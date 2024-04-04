@@ -4,10 +4,11 @@ import Navbar from "@/component/Navbar";
 import FeatureSection from "@/component/FeatureSection";
 import CallToAction from "@/component/CallToAction";
 import HeroSection from "@/component/HeroSection";
+import Appbar from "@/component/Appbar";
 export default function Home() {
   return (
     <main>
-      <Navbar />
+      <Appbar />
       <HeroSection />
       <FeatureSection />
       <CallToAction />

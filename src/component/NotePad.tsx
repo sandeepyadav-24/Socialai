@@ -1,6 +1,6 @@
 const NotePad = () => {
   return (
-    <div className="w-3/5 bg-[#F5F9FC] m-3 rounded-xl  h-[800px] overflow-y-auto">
+    <div className="md:w-3/5 bg-[#F5F9FC] m-3 rounded-xl  h-[800px] overflow-y-auto">
       <div className="heaidng text-2xl font-bold p-3">Note Pad</div>
       <hr />
       <div className="p-5 overflow-y-auto max-h-[750px]">
