@@ -1,3 +1,4 @@
+"use client";
 import Editor from "./Editor";
 const NoteWriting = () => {
   return (
