@@ -1,5 +1,5 @@
 "use client";
-import Editor from "./Editor";
+
 const NoteWriting = () => {
   return (
     <div className="w-4/5 m-3 bg-[#F5F9FC] rounded-xl">
@@ -11,9 +11,7 @@ const NoteWriting = () => {
       </div>
 
       <hr />
-      <div className="overflow-y-auto max-h-[750px]">
-        <Editor />
-      </div>
+      <div className="overflow-y-auto max-h-[750px]"></div>
     </div>
   );
 };
