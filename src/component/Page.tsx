@@ -1,6 +1,6 @@
 import Dashboard from "@/component/Dashboard";
 import LeftNavbar from "@/component/LeftNavbar";
-const Home = () => {
+const Page = () => {
   return (
     <div className="flex flex-col md:flex-row bg-black ">
       <LeftNavbar />
@@ -8,4 +8,4 @@ const Home = () => {
     </div>
   );
 };
-export default Home;
+export default Page;

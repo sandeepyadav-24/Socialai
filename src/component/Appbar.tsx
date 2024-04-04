@@ -14,7 +14,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-
+import Link from "next/link";
 interface Props {
   /**
    * Injected by the documentation to work in an iframe.
@@ -24,7 +24,7 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ["Pricing", "Chatbot", "Sign Up", "Login"];
+const navItems = [{ text: "Login", link: "/page" }];
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
@@ -35,18 +35,23 @@ export default function DrawerAppBar(props: Props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        Avatar.AI
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "center", height: "100%" }}
+    >
+      <Typography variant="h3" sx={{ my: 2 }}>
+        <Link href="/">Avatar.AI</Link>
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+        {navItems.map((item, index) => (
+          <Link href={item.link} key={index} passHref>
+            {" "}
+            {/* Use NextLink as wrapper */}
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+              <ListItemText primary={item.text} key={index} />
             </ListItemButton>
-          </ListItem>
+          </Link>
         ))}
       </List>
     </Box>
@@ -61,7 +66,6 @@ export default function DrawerAppBar(props: Props) {
       <AppBar component="nav">
         <Toolbar>
           <IconButton
-            color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
@@ -72,14 +76,26 @@ export default function DrawerAppBar(props: Props) {
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", sm: "block" },
+            }}
           >
-            MUI
+            Sandeep Yadav
           </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
-                {item}
+          <Box
+            sx={{
+              display: { xs: "none", sm: "block" },
+            }}
+          >
+            {navItems.map((item, index) => (
+              <Button
+                key={index}
+                component={Link} // Use NextLink as component
+                href={item.link} // Pass href prop
+                sx={{ color: "#fff" }}
+              >
+                {item.text}
               </Button>
             ))}
           </Box>
@@ -105,6 +121,7 @@ export default function DrawerAppBar(props: Props) {
           {drawer}
         </Drawer>
       </nav>
+      <Box component="main" sx={{ p: 3 }}></Box>
     </Box>
   );
 }
