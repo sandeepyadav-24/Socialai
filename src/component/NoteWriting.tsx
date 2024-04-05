@@ -1,4 +1,5 @@
 "use client";
+import Editor from "./Editor";
 
 const NoteWriting = () => {
   return (
@@ -11,7 +12,9 @@ const NoteWriting = () => {
       </div>
 
       <hr />
-      <div className="overflow-y-auto max-h-[750px]"></div>
+      <div className="overflow-y-auto max-h-[750px]">
+        <Editor />
+      </div>
     </div>
   );
 };
